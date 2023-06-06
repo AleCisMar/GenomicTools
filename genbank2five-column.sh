@@ -1,5 +1,5 @@
 #USAGE: create a list.txt of .gbk files
-# for i in $(cat list.txt ); do echo ">Feature ""${i%.gbk}"; genbank2five-column.sh $i; done
+# for i in $(cat list.txt ); do echo ">Feature ""${i%.gbk}"; genbank2five-column.sh $i; echo; done
 
 grep -E 'CDS|product' $1 |
 sed '/translation/d' |
